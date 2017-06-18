@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Example for AngularJS</title>
+    <script src="https://cdn.bootcss.com/angular.js/1.4.6/angular.min.js"></script>
+</head>
+
+<body ng-app="app">
+    <div ng-controller="exampleCtrl">
+        <p>
+            {{message}}
+        </p>
+        <button ng-click="onClick()">点击</button>
+    </div>
+    <script>
+    var app = angular.module('app', []);
+    app.controller('exampleCtrl', ["$scope", "$interval", function($scope, $interval) {
+        $scope.message = "点击下面按钮，将追加3次文本内容。每次追加间隔为1S。"
+        $scope.onClick = function() {
+            $interval(function() {
+                $scope.message += '哈哈哈哈!';
+            }, 1000, 3);
+        }
+    }])
+    </script>
+</body>
+
+</html>

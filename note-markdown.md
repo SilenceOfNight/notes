@@ -21,6 +21,19 @@
 2. Ctrl + Alt + X : 自动导出HTML文件到Markdown文本所在的目录下。
 3. Ctrl + Alt + C : 复制HTML
 
+#### 3. Monokai Extended & Markdown Extended
+    Sublime诸多主题默认不支持Markdown语法的高亮显示，Monokai Extended & Markdown Extended可以很好的解决此问题。
+###### 步骤
+1. pcip **Monokai Extended**
+2. pcip **Markdown Extended**
+3. 点击右下角切**换文档格式**（Markdown Extended）。或者`Set Syntax: Markdown Extended`(Ctrl+Shift+P ssm)
+
+#### 4. Table Editor
+    辅助书写表格。自适应，自动对齐。书写表格时，使用Tab键。
+###### 步骤
+1. pcip Table Editor
+2. Table Editor: Set table syntax 'EmacsOrgMode' for current view(Ctrl+Shift+P stso)
+
 ## 基础语法
 [Markdown 语法说明 (简体中文版)](http://www.appinn.com/markdown/)
 
