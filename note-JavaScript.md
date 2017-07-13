@@ -69,6 +69,23 @@ console.log('-----------------------------------------------');
 console.log([1, 2, 3, 4].reduce(appendCurrent, 0)); //回调函数调用4次，输出结果为0->1->2->3->4
 ```
 
+### Generator 函数
+
+##### 声明方式
+``` javascript
+function* gen(x) {
+  var y = yield x + 2;
+  return y;
+}
+
+var g = gen(1); //gen {[[GeneratorStatus]]: "suspended"}
+g.next(); //Object {value: 3, done: false}
+g.next(); //Object {value: undefined, done: true}
+```
+声明时，在函数名称前加" **\*** "，用以与普通函数以示区别。
+
+[学习地址传送门](http://www.ruanyifeng.com/blog/2015/04/generator.html)
+
 ### Promise
 ES6 原生提供了 Promise 对象。可以有效解决回调地狱问题。
 
@@ -154,3 +171,5 @@ promise.then(function(value) {
 RxJS，Reactive Extensions for JavaScript，即JavaScript的响应式扩展。其思路是把随时间不断变化的数据、状态、事件等等转成可以被观察的序列（Observable Sequence），然后订阅序列中那些Observable对象的变化。一旦变化，就会执行事件安排好的各种转换和操作。
 
 [RxJS入门](https://yq.aliyun.com/articles/65027)
+
+
